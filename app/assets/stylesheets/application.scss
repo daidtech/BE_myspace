@@ -12,6 +12,64 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
 
  @import "bootstrap";
+ @import "variables.scss";
+
+body {
+  color: #ffffff;
+  background-color: $main-color;
+}
+.navigation {
+  height: $heigh-top-navigation;
+  .top-nav {
+    .home-icon {
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        display: block;
+      }
+    }
+    .nav-group {
+
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  .home {
+    height: 100dvh;
+    width: 100dvh;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('images/background_home.png');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+
+    &-content {
+      margin-top: 25dvh;
+      height: 75dvh;
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .navigation {
+    .top-nav {
+      .home-icon {
+        &-mobile {
+          display: block;
+        }
+        &-desktop {
+          display: none;
+        }
+      }
+    }
+  }
+}

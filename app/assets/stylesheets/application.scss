@@ -24,6 +24,7 @@ body {
 }
 .navigation {
   height: $heigh-top-navigation;
+  padding: 0 $heigh-top-navigation;
   .top-nav {
     .home-icon {
       &-mobile {
@@ -42,8 +43,7 @@ body {
 .content {
   width: 100%;
   .home {
-    height: 100dvh;
-    width: 100dvh;
+    width: inherit;
     position: absolute;
     left: 0;
     display: flex;
@@ -51,14 +51,44 @@ body {
     background-image: url('images/background_home.png');
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: contain; /* Resize the background image to cover the entire container */
-
     &-content {
-      margin-top: 25dvh;
-      height: 75dvh;
       width: 50%;
+      margin: auto;
+      margin-top: 25%;
     }
   }
 }
+
+.left-nav {
+  position: relative;
+  .nav-content {
+    position: fixed;
+    height: 50vh;
+    top: 25vh;
+    background: rgba(255, 255, 255, 0.64);
+    border-radius: 0px 50px 50px 0px;
+    .nav {
+      width: 60px;
+      margin-top: 50px;
+      height: calc(100% - (50px * 2));
+      justify-content: space-around;
+      .cus-nav-item {
+        width: 40px;
+        height: 40px;
+        color: #0F103F;
+        &.active {
+          color: #ffffff;
+        }
+      }
+    }
+    .menu-border {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
+
 @media screen and (max-width: 575px) {
   .navigation {
     .top-nav {

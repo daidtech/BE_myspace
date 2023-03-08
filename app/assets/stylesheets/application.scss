@@ -83,9 +83,17 @@ body {
     }
     .menu-border {
       position: absolute;
-      top: 0;
+      top: calc(50px/2 + 12px);
       z-index: -1;
+      left: 0;
+      transition: 1s;
+      transform: translate3d(0,0,0);
+      svg {
+        height: calc((50vh)/5);
+        width: 80px;
+      }
     }
+
   }
 }
 

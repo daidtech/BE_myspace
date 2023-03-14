@@ -43,18 +43,23 @@ body {
 .content {
   width: 100%;
   .home {
+    position: relative;
     width: inherit;
-    position: absolute;
-    left: 0;
     display: flex;
     justify-content: center;
-    background-image: url('images/background_home.png');
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain; /* Resize the background image to cover the entire container */
+    height: calc(130vh - 80px);
     &-content {
       width: 50%;
       margin: auto;
-      margin-top: 25%;
+      // content block is 150px
+      margin-top: calc((100vh - 80px)/2 - 150px);
+    }
+    .background-landscape {
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+      object-position: left;
     }
   }
 }

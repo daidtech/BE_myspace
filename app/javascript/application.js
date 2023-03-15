@@ -4,17 +4,24 @@ import "controllers"
 import 'jquery'
 import 'jquery_ujs'
 
+const updateMenuBorderPosition = (top) => {
+  $('#left__sidebar').css({top: top+'px'})
+}
 
-const removeActiveNav = () => {
+const changeActiveTab = (e) => {
   const cus_nav_items = $('.cus-nav-item')
   for (const nav of cus_nav_items) {
-    console.log("🚀 ~ file: application.js:13 ~ removeActiveNav ~ nav.classList:", nav.classList)
+    $(nav).removeClass('active')
   }
+  $(`#${e.target.id}`).addClass('active')
+  updateMenuBorderPosition($(`#${e.target.id}`).position().top - 45)
 }
 
 const handleClickNav = (e) => {
-  // e.preventDefault()
+  e.preventDefault()
+  changeActiveTab(e)
 }
+
 window.addEventListener("load", () => {
   const cus_nav_items = $('.cus-nav-item')
   for (const nav of cus_nav_items) {

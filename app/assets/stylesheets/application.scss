@@ -96,6 +96,28 @@ body {
   }
 }
 
+.about-me {
+  .background-image {
+    position: relative;
+    .about-eclip {
+      position: absolute;
+    }
+    .about-earth {
+      position: absolute;
+      top: 0;
+      left: 50vh;
+      width: 50vh;
+      height: 50vh;
+      margin: 0 auto;
+      background-image: linear-gradient(to left top, #4d59ad, #565ab1, #5f5ab4, #685bb7, #715bba, #795bbc, #805abe, #885ac0, #9159c2, #9957c3, #a256c4, #ab54c4);    border-radius: 50%;
+    }
+    .about-diamond {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
 @media screen and (max-width: 575px) {
   .navigation {
     .top-nav {

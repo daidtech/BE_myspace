@@ -123,6 +123,13 @@ body {
   .background-landscape {
 
   }
+  .images {
+    .thumbnail.active {
+      img {
+        width: 33%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {

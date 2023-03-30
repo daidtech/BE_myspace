@@ -44,7 +44,7 @@ body {
     width: inherit;
     display: flex;
     justify-content: center;
-    height: calc(130vh - 80px);
+    height: calc(#{$section-height} - 80px);
     &-content {
       width: 50%;
       margin: auto;
@@ -99,7 +99,7 @@ body {
 .about-me {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: $section-height;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -108,7 +108,7 @@ body {
     object-fit: contain;
     object-position: center;
     z-index: -1;
-    height: 100vh;
+    height: 100%;
   }
   .about-me-content {
     position: absolute;
@@ -119,11 +119,30 @@ body {
 }
 
 .my-works {
-  height: 100vh;
+  height: $section-height;
+  position: relative;
+  .background-landscape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+  }
   .slides {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    .title {
+      height: 2rem;
+    }
+    .slides-control {
+
+    }
     .images {
+      height: calc(100% - 2rem);
       display: flex;
       justify-content: center;
+      align-items: center;
       .thumbnail {
         position: relative;
         left: 0;

@@ -127,11 +127,11 @@ body {
     height: 100%;
     object-fit: cover;
     top: 0;
+    z-index: -1;
   }
   .slides {
     height: 100%;
     position: relative;
-    z-index: 1;
     .title {
       height: 2rem;
     }
@@ -154,29 +154,46 @@ body {
         .work-block {
           position: absolute;
           width: 20%;
-          height: $work-thumbnail-height;
+          height: $work-block-height;
           border-radius: 30px;
           background: rgba(191, 249, 221, 0.4);
           backdrop-filter: blur(20px);
           left: 20%;
+          cursor: pointer;
+          .work-title {
+            height: calc(100% - #{$work-block-image-height} - 5%);
+            margin-bottom: 0;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+          }
           img {
-            width: 150px;
-            height: 75%;
+            width: 80%;
+            height: $work-block-image-height;
             margin: 5% 10%;
           }
           &.active {
             position: absolute;
             z-index: 2;
-            width: 30%;
-            height: calc(#{$work-thumbnail-height} + 2rem);
-            left: calc(20% + 25% / 2);
-
+            width: 25%;
+            height: calc(#{$work-block-height} + 2rem*2);
+            left: 38%;
+            margin-top: -2rem;
             img {
-              width: 150px;
+
+            }
+            .work-title {
+              height: calc(20% - 2rem + .5rem);
             }
           }
           &:last-child {
             left: 60%;
+          }
+          &:first-child {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(10px);
+            .work-title {
+              background-color: rgba(1, 1, 1, 0.3);
+            }
           }
         }
       }

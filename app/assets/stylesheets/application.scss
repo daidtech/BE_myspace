@@ -214,6 +214,23 @@ body {
   }
 }
 
+.contact {
+  position: relative;
+  min-height: 100vh;
+  .background-image {
+    position: absolute;
+    .contact-galaxy {
+      &-left {
+        width: 30%;
+      }
+      &-right {
+        width: 70%;
+      }
+
+    }
+  }
+}
+
 @media screen and (max-width: 575px) {
   .navigation {
     .top-nav {

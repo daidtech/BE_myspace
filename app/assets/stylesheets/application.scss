@@ -216,9 +216,10 @@ body {
 
 .contact {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   .background-image {
     position: absolute;
+    display: flex;
     .contact-galaxy {
       &-left {
         width: 30%;
@@ -227,6 +228,33 @@ body {
         width: 70%;
       }
 
+    }
+  }
+  .content-block {
+    width: 70%;
+    margin: 15vh 15%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    background: rgba(47, 47, 138, 0.6);
+    border-radius: 30px;
+    padding: 4rem;
+    h3 {
+      text-align: center;
+    }
+    .get-in-touch-info {
+      width: 40%;
+    }
+    .in-touch-form {
+      width: 60%;
+      padding: 0 10%;
+      input, textarea {
+        background: #FFFFFF4D;
+        box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
+        border-radius: 10px;
+        background: #FFFFFF;
+        padding: 10px 20px;
+      }
     }
   }
 }

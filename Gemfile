@@ -74,3 +74,4 @@ group :test do
 end
 
 gem "appengine", "~> 0.7.0"
+gem "figaro"

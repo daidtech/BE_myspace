@@ -1,0 +1,9 @@
+entrypoint: bundle exec rackup --port $PORT
+env: flex
+runtime: ruby
+runtime_config:
+    operating_system: "ubuntu22"
+env_variables:
+  SECRET_KEY_BASE: ENV["SECRET_KEY"]
+beta_settings:
+  cloud_sql_instances: ENV["CLOUD_SQL_INSTANCES"]

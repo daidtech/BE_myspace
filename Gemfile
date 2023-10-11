@@ -75,3 +75,4 @@ end
 
 gem "appengine", "~> 0.7.0"
 gem "figaro"
+gem 'mina'

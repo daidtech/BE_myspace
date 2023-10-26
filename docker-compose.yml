@@ -13,9 +13,9 @@ services:
     volumes:
       - 'postgres:/var/lib/postgresql/data'
     environment:
-      POSTGRES_USER: portfolios_page
-      POSTGRES_PASSWORD: portfolios_page
-      POSTGRES_DB: portfolios_page
+      POSTGRES_USER: <%= ENV["DATABASE_USER_NAME"] %>
+      POSTGRES_PASSWORD: <%= ENV["DATABASE_PASSWORD"] %>
+      POSTGRES_DB: <%= ENV["DATABASE"] %>
     ports:
       - '15432:5432'
 volumes:

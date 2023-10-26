@@ -1,11 +1,11 @@
 version: "3.7"
 
 services:
-  porfolio-web:
+  web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/best_project
+      - .:/app
     ports:
       - "3000:3000"
   db:
@@ -13,9 +13,9 @@ services:
     volumes:
       - 'postgres:/var/lib/postgresql/data'
     environment:
-      POSTGRES_USER: <%= ENV["DATABASE_USER_NAME"] %>
-      POSTGRES_PASSWORD: <%= ENV["DATABASE_PASSWORD"] %>
-      POSTGRES_DB: <%= ENV["DATABASE"] %>
+      POSTGRES_USER: portfolios_page
+      POSTGRES_PASSWORD: portfolios_page
+      POSTGRES_DB: portfolios_page
     ports:
       - '15432:5432'
 volumes:

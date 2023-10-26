@@ -8,11 +8,13 @@ FROM ruby:3.0.6-bullseye
 
 
 
-RUN apt-get install curl
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
-    apt-get install -y nodejs
+RUN apt-get update \
+    && apt-get install -y curl \
+    && curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get clean
 
-WORKDIR /best_project
+WORKDIR /app
 COPY . .
 
 RUN gem install bundler -v 2.3.0

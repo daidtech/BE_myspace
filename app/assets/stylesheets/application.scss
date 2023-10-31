@@ -58,6 +58,14 @@ body {
       object-fit: cover;
       object-position: top;
     }
+    .home-content {
+      .actions {
+        button.btn-primary {
+          border-radius: 30px;
+
+        }
+      }
+    }
   }
 }
 
@@ -138,9 +146,6 @@ body {
     position: relative;
     .title {
       height: 2rem;
-    }
-    .slides-control {
-
     }
     .works-content {
       height: 100%;

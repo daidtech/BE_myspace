@@ -17,7 +17,9 @@
 
  @import "bootstrap";
  @import "variables.scss";
-
+html {
+  font-size: $global-font-size;
+}
 body {
   color: #ffffff;
   background-color: $main-color;
@@ -40,7 +42,6 @@ body {
 .content {
   width: 100%;
   .home {
-    position: relative;
     width: inherit;
     display: flex;
     justify-content: center;
@@ -51,18 +52,32 @@ body {
       // content block is 150px
       margin-top: calc((100vh - 80px)/2 - 150px);
     }
-    .background-landscape {
-      position: absolute;
-      width: 100%;
-      height: inherit;
-      object-fit: cover;
-      object-position: top;
+    .wrap-background-image {
+      position: relative;
+      width: inherit;
+      .background-landscape {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: top;
+      }
     }
     .home-content {
+      position: absolute;
       .actions {
         button.btn-primary {
-          border-radius: 30px;
-
+          padding: 0.62rem;
+          width: 12.5rem;
+          border-radius: 1.875rem;
+          &.contact-me {
+            border: 1px solid rgba(254, 254, 254, 0.60);
+            background: rgba(255, 255, 255, 0.30);
+          }
+          &.download-cv {
+            border: 1px solid rgba(254, 254, 254, 0.60);
+            background: linear-gradient(102deg, #C961DE 25.84%, #3645A0 98.95%);
+          }
         }
       }
     }

@@ -24,6 +24,28 @@ body {
   color: #ffffff;
   background-color: $main-color;
 }
+.btn {
+  padding: 0.62rem;
+  width: 12.5rem;
+  border-radius: 1.875rem;
+  &.btn-custom {
+    border: 1px solid rgba(254, 254, 254, 0.60);
+    background: linear-gradient(102deg, #C961DE 25.84%, #3645A0 98.95%);
+    color: #FFFFFF;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.203%; /* 1.52156rem */
+  }
+}
+.link-custom {
+  color: #FFF;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
 .navigation {
   height: $heigh-top-navigation;
   padding: 0 $heigh-top-navigation;
@@ -67,16 +89,11 @@ body {
       position: absolute;
       .actions {
         button.btn-primary {
-          padding: 0.62rem;
-          width: 12.5rem;
-          border-radius: 1.875rem;
           &.contact-me {
             border: 1px solid rgba(254, 254, 254, 0.60);
             background: rgba(255, 255, 255, 0.30);
           }
           &.download-cv {
-            border: 1px solid rgba(254, 254, 254, 0.60);
-            background: linear-gradient(102deg, #C961DE 25.84%, #3645A0 98.95%);
           }
         }
       }
@@ -278,6 +295,9 @@ body {
         border-radius: 10px;
         background: #FFFFFF;
         padding: 10px 20px;
+      }
+      .btn.send-message {
+
       }
     }
   }

@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import 'jquery'
 import 'jquery_ujs'
+import 'bootstrap'
 
 const updateMenuBorderPosition = (top) => {
   $('#left__sidebar').css({top: top+'px'})

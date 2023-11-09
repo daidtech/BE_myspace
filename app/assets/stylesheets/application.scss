@@ -27,7 +27,7 @@ body {
 .btn {
   padding: 0.62rem;
   width: 12.5rem;
-  border-radius: 1.875rem;
+  border-radius: .625rem;
   &.btn-custom {
     border: 1px solid rgba(254, 254, 254, 0.60);
     background: linear-gradient(102deg, #C961DE 25.84%, #3645A0 98.95%);
@@ -288,10 +288,10 @@ body {
       text-align: center;
     }
     .get-in-touch-info {
-      width: 40%;
+      // width: 40%;
     }
     .in-touch-form {
-      width: 60%;
+      // width: 60%;
       padding: 0 10%;
       input, textarea {
         background: #FFFFFF4D;
@@ -309,6 +309,7 @@ body {
 
 @media screen and (max-width: 575px) {
   .navigation {
+    padding: 0 .2rem;
     .top-nav {
       .home-icon {
         &-mobile {

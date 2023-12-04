@@ -313,4 +313,12 @@ body {
       }
     }
   }
+  .left-nav {
+    position: fixed;
+    .nav-content {
+      width: 100vw;
+      top: 83vh;
+      background: rgba(255, 255, 255, 0.64);
+    }
+  }
 }

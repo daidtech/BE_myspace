@@ -15,8 +15,9 @@
  *= require material_icons
  */
 
- @import "bootstrap";
- @import "variables.scss";
+@import "bootstrap";
+@import "variables.scss";
+
 html {
   font-size: $global-font-size;
 }

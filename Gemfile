@@ -75,3 +75,9 @@ end
 
 gem "appengine", "~> 0.7.0"
 gem "figaro"
+gem "camaleon_cms"
+
+
+#################### Camaleon CMS include all gems for plugins and themes ####################
+require_relative './lib/plugin_routes'
+instance_eval(PluginRoutes.draw_gems)

@@ -73,3 +73,4 @@ xerial*.*
 # Ignore application configuration
 /config/application.yml
 
+/camaleon_cms-2.7.5

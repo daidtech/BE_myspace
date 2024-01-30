@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "demo1", to: 'demos#demo1'
   root "home#index"
+
+  # create router for module api v1
+  namespace :api do
+    namespace :v1 do
+      # add routes for module api v1 here
+      get :posts, to: 'posts#index'
+    end
+  end
 end

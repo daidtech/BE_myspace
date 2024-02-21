@@ -74,3 +74,4 @@ xerial*.*
 /config/application.yml
 
 /camaleon_cms-2.7.5
+google*.html

@@ -5,6 +5,9 @@ module Api
       def index
         @posts = CamaleonCms::PostType.first.posts.published
       end
+      def show
+        @post = CamaleonCms::PostType.first.posts.published.where(id: params[:id])
+      end
     end
   end
 end

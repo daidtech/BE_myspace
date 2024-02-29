@@ -76,7 +76,7 @@ end
 gem "appengine", "~> 0.7.0"
 gem "figaro"
 gem "camaleon_cms"
-
+gem 'will_paginate', '~> 4.0'
 
 #################### Camaleon CMS include all gems for plugins and themes ####################
 require_relative './lib/plugin_routes'

@@ -7,7 +7,7 @@ module Api
       end
 
       def show
-        @post = CamaleonCms::PostType.first.posts.published.where(id: params[:id])
+        @post = CamaleonCms::PostType.first.posts.published.find(params[:id])
       end
     end
   end

@@ -4,6 +4,8 @@ module Api
     class CategoriesController < ApplicationController
       def index
         @categories = CamaleonCms::Category.all
+        CamaleonCms::Category.where(parent_id: MY_CONSTANT[:CATEGORY][:CategoryIDNone])
+        # get child of each Category
       end
 
       def show
